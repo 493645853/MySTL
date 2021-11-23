@@ -1,0 +1,8 @@
+include_directories(${PROJECT_SOURCE_DIR}/MySTL)
+file (GLOB_RECURSE files *.cpp)
+foreach (file ${files})
+    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+    add_executable (${exe} ${file})
+    #target_link_libraries(${exe} ${OpenCV_LIBS} ${PCL_LIBRARIES} ${g2o_LIBS})
+    message ( \ \ \ \ [ \ Load \ All \ Mains \ ]  \ ${exe}.cpp\ will\ be\ compiled\ to\ ${exe})
+endforeach ()
