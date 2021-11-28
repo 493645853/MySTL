@@ -30,14 +30,6 @@ namespace mySTL
 
         static void deallocate(pointer ptr);
         static void deallocate(pointer ptr, size_type n);
-
-        // construct & destruct
-        static void construct(pointer ptr);
-        static void construct(pointer ptr, const T& value);
-        static void construct(pointer ptr, T&& value);
-
-        template <class... Args> 
-        static void construct(pointer ptr, Args&&... args);
     };
 
     /**

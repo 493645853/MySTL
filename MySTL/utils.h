@@ -68,6 +68,7 @@ namespace mySTL
     template <class T, size_t N>
     constexpr size_t getArrayLen(T(&arr)[N]) {return N;}
 
+    
 }
 
 #endif // __UTILS_H__
