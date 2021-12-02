@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     {
         std::cout << a[i] << " " << b[i] << std::endl;
     }
-
+    
     // swap the array
     mySTL::swap<int,N>(a, b);
     for(int i = 0;i<N;i++)

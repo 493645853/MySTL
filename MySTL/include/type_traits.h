@@ -64,6 +64,18 @@ namespace mySTL
     struct conditional<false, B1, B2>
     {typedef B2 type;};
 
+    // primary template
+    /// define the typedef member only if the bool is true
+    template <bool, class T = void>
+    struct enable_if {};
+
+    // partial specialization for true
+    // 中心思想是 SFINAE (specialization failure is not an error)
+    // 如果条件不为true, 则编译器找不到type则不会生成模板函数
+    template <class T>
+    struct enable_if<true, T>
+    {typedef T type;}; 
+
     // 用conditional实现 or
     template <class...> // 申明__or_的模板参数可变
     struct __or_;
@@ -129,6 +141,7 @@ namespace mySTL
 
     template <class T>
     struct is_rvalue_reference<T&&>:public true_type {};
+
 
 }
 

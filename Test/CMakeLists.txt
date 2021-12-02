@@ -1,4 +1,4 @@
-include_directories(${PROJECT_SOURCE_DIR}/MySTL)
+include_directories(${PROJECT_SOURCE_DIR}/MySTL/include)
 file (GLOB_RECURSE files *.cpp)
 foreach (file ${files})
     string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})

@@ -35,7 +35,7 @@ namespace mySTL
     template <class T>
     inline void __destroy_one(T* ptr, std::false_type)
     {
-        if(!ptr) ptr->~T();  // 调用析构函数
+        if(ptr) ptr->~T();  // 调用析构函数
     }
 
     template <class T>

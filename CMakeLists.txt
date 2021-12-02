@@ -1,4 +1,3 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 project(mySTL)
-
 add_subdirectory(${PROJECT_SOURCE_DIR}/Test)
